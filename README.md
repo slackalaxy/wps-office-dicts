@@ -1,6 +1,7 @@
 # WPS Office spellcheck dictionaries
 
-This provides spellcheck dictionaries for [WPS Office](https://www.wps.com/). The language files are adapted from the [LibreOffice Dictionaries](https://github.com/LibreOffice/dictionaries/) project. They have been tested on WPS office for Linux, but my wild guess is they will work on Windows, too. 
+This provides spellcheck dictionaries for [WPS Office](https://www.wps.com/). So far, I have found tutorials about [how to use spell check on WPS Office](https://www.wps.com/academy/how-to-use-the-spell-check-quick-tutorials-1870938/), but no actual dictionaries. So, here it is. The language files are adapted from the [LibreOffice Dictionaries](https://github.com/LibreOffice/dictionaries/) project. They have been tested on WPS office for Linux, but my wild guess is they will work on Windows, too. For more information, visit T[he Document Foundation Wiki](https://wiki.documentfoundation.org/Development/Dictionaries).
+
 
 ## Installation
 Depending on your distribution, installation may differ. For [Slackware](http://www.slackware.com/) Linux, follow these instructions:
