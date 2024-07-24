@@ -1,6 +1,6 @@
 # WPS Office spellcheck dictionaries
 
-This provides spellcheck dictionaries for [WPS Office](https://www.wps.com/). So far, I have found tutorials about [how to use spell check on WPS Office](https://www.wps.com/academy/how-to-use-the-spell-check-quick-tutorials-1870938/), but no actual dictionaries. So, here it is. The language files are adapted from the [LibreOffice Dictionaries](https://github.com/LibreOffice/dictionaries/) project, you can read about the changes in this [old blog post of mine](https://slackalaxy.com/2021/04/03/wps-office-v11-dictionary/). They have been tested on WPS office for Linux, but my wild guess is they should work on Windows, too. For more information, visit T[he Document Foundation Wiki](https://wiki.documentfoundation.org/Development/Dictionaries).
+This provides spellcheck dictionaries for [WPS Office](https://www.wps.com/). So far, I have found tutorials about [how to use spell check on WPS Office](https://www.wps.com/academy/how-to-use-the-spell-check-quick-tutorials-1870938/), but no actual dictionaries. So, here they are. The language files are adapted from the [LibreOffice Dictionaries](https://github.com/LibreOffice/dictionaries/) project, you can read about the changes in this [old blog post of mine](https://slackalaxy.com/2021/04/03/wps-office-v11-dictionary/). They have been tested on WPS office for Linux, but my wild guess is they should work on Windows, too. For more information, visit [The Document Foundation Wiki](https://wiki.documentfoundation.org/Development/Dictionaries).
 
 
 ## Installation
@@ -12,8 +12,8 @@ Depending on your distribution, the system-wide installation location may differ
 
 Note that for Slackware, this is [available on SBo](https://slackbuilds.org/repository/15.0/office/wps-office-dicts/).
 
-## Version
-Currently, this is adapted from [libreoffice-7.5.4.1](https://github.com/LibreOffice/dictionaries/releases/tag/libreoffice-7.5.4.1)
+## Version 24.2.4.2
+Currently, this is adapted from [libreoffice-24.2.4.2](https://github.com/LibreOffice/dictionaries/releases/tag/libreoffice-24.2.4.2)
 
 ## Languages included
 ```
