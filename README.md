@@ -117,23 +117,23 @@ dicts="https://github.com/LibreOffice/dictionaries/archive/libreoffice-${version
 list="https://raw.githubusercontent.com/slackalaxy/wps-office-dicts/main/DICTIONARIES"
 
 SRC=$(pwd)
-cd $SRC
+cd ${SRC}
 
-wget -c $dicts
-wget -c $list
+wget -c ${dicts}
+wget -c ${list}
 
 tar xvf dictionaries-libreoffice-${version}.tar.gz
-cd dictionaries-libreoffice-$version
+cd dictionaries-libreoffice-${version}
 
 # you can leave only the dictionaries you want. Of course, there
 # will be a .footprint and .signature mismatch.
-LANGS=$(awk '{print $1}' $SRC/DICTIONARIES  | tr '\n' ' ')
+LANGS=$(awk '{print $1}' ${SRC}/DICTIONARIES  | tr '\n' ' ')
 
-DICTDIR="$SRC/spellcheck"
+DICTDIR="${SRC}/spellcheck"
 
 for i in ${LANGS[@]} ; do
 	# get the description
-	d=$(grep "$i" $SRC/DICTIONARIES | awk '{print $2}')
+	d=$(grep "$i" ${SRC}/DICTIONARIES | awk '{print $2}')
 	mkdir -p $DICTDIR/$i
  
 	# create the dictionary config
