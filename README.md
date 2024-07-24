@@ -105,3 +105,57 @@ tr_TR    Turkish
 uk_UA    Ukrainian
 vi_VN    Vietnamese
 ```
+
+## How were the dictionaries converted?
+```sh
+#!/bin/bash
+
+set -e
+
+version="24.2.4.2"
+dicts="https://github.com/LibreOffice/dictionaries/archive/libreoffice-${version}/dictionaries-libreoffice-${version}.tar.gz"
+list="https://raw.githubusercontent.com/slackalaxy/wps-office-dicts/main/DICTIONARIES"
+
+SRC=$(pwd)
+cd $SRC
+
+wget -c $dicts
+wget -c $list
+
+tar xvf dictionaries-libreoffice-${version}.tar.gz
+cd dictionaries-libreoffice-$version
+
+# you can leave only the dictionaries you want. Of course, there
+# will be a .footprint and .signature mismatch.
+LANGS=$(awk '{print $1}' $SRC/DICTIONARIES  | tr '\n' ' ')
+
+DICTDIR="$SRC/spellcheck"
+
+for i in ${LANGS[@]} ; do
+	# get the description
+	d=$(grep "$i" $SRC/DICTIONARIES | awk '{print $2}')
+	mkdir -p $DICTDIR/$i
+ 
+	# create the dictionary config
+	echo "[Dictionary]" >> $DICTDIR/$i/dict.conf
+	echo "DisplayName=${d//_/ }" >> $DICTDIR/$i/dict.conf
+	echo "DisplayName[$i]=${d//_/ }" >> $DICTDIR/$i/dict.conf  
+
+	# This is the most common case  
+	find . -name "$i.aff" -exec cp {} $DICTDIR/$i/main.aff \;
+	find . -name "$i.dic" -exec cp {} $DICTDIR/$i/main.dic \;
+  
+	# But these also exist for de_CH, de_DE
+	find . -name "${i}_frami.aff" -exec cp {} $DICTDIR/$i/main.aff \;
+	find . -name "${i}_frami.dic" -exec cp {} $DICTDIR/$i/main.dic \;  
+  
+	# this is needed for be_BY
+	find . -name "${i:0:2}-official.aff" -exec cp {} $DICTDIR/$i/main.aff \;
+	find . -name "${i:0:2}-official.dic" -exec cp {} $DICTDIR/$i/main.dic \;  
+  
+	# this is needed for fa_IR abd sr_Latn
+	find . -name "${i/_/-}.aff" -exec cp {} $DICTDIR/$i/main.aff \;
+	find . -name "${i/_/-}.dic" -exec cp {} $DICTDIR/$i/main.dic \;  
+done
+	
+```
