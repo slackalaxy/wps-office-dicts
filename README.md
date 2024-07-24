@@ -5,7 +5,7 @@ This provides spellcheck dictionaries for [WPS Office](https://www.wps.com/). So
 
 ## Installation
 Depending on your distribution, the system-wide installation location may differ. Generally, follow these instructions:
-* get the folder you need, e.g. `en_GB` for British English. It contains files `dict.conf`, `main.aff`, `main.dic`
+* get the folder you need from `spellcheck`, e.g. `en_GB` for British English. It contains files `dict.conf`, `main.aff`, `main.dic`
 * copy the folder to either place:
    * you user only:  `~/.local/share/Kingsoft/office6/dicts/`
    * system-wide: `/opt/kingsoft/wps-office/office6/dicts/spellcheck/`
