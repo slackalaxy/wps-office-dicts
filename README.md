@@ -125,8 +125,7 @@ wget -c ${list}
 tar xvf dictionaries-libreoffice-${version}.tar.gz
 cd dictionaries-libreoffice-${version}
 
-# you can leave only the dictionaries you want. Of course, there
-# will be a .footprint and .signature mismatch.
+# You can leave only the dictionaries you want, by modifying the DICTIONARIES file
 LANGS=$(awk '{print $1}' ${SRC}/DICTIONARIES  | tr '\n' ' ')
 
 DICTDIR="${SRC}/spellcheck"
