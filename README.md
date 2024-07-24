@@ -4,13 +4,11 @@ This provides spellcheck dictionaries for [WPS Office](https://www.wps.com/). So
 
 
 ## Installation
-Depending on your distribution, the system-wide installation location may differ. For [Slackware](http://www.slackware.com/) Linux, follow these instructions:
-* get the folder you need, e.g. en_GB for British English. It contains files `dict.conf`, `main.aff`, `main.dic`
+Depending on your distribution, the system-wide installation location may differ. Generally, follow these instructions:
+* get the folder you need, e.g. `en_GB` for British English. It contains files `dict.conf`, `main.aff`, `main.dic`
 * copy the folder to either place:
    * you user only:  `~/.local/share/Kingsoft/office6/dicts/`
    * system-wide: `/opt/kingsoft/wps-office/office6/dicts/spellcheck/`
-
-Note that for Slackware, this is [available on SBo](https://slackbuilds.org/repository/15.0/office/wps-office-dicts/).
 
 ## Version 24.2.4.2
 Currently, this is adapted from [libreoffice-24.2.4.2](https://github.com/LibreOffice/dictionaries/releases/tag/libreoffice-24.2.4.2)
@@ -39,7 +37,6 @@ en_CA    English (Canada)
 en_GB    English (Great Britain)
 en_ZA    English (South African)
 eo       Esperanto
-es       Spanish (international)
 es_AR    Spanish (Argentina)
 es_BO    Spanish (Bolivia)
 es_CL    Spanish (Chile)
