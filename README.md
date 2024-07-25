@@ -12,7 +12,7 @@ Depending on your distribution, the system-wide installation location may differ
 ## Version 24.2.4.2
 Currently, this is adapted from [libreoffice-24.2.4.2](https://github.com/LibreOffice/dictionaries/releases/tag/libreoffice-24.2.4.2)
 
-[![Badge](https://img.shields.io/badge/wps-office-dicts-v_24.2.4.2-green)](https://github.com/slackalaxy/wps-office-dicts/releases/tag/24.2.4.2)
+[![Badge](https://img.shields.io/badge/wps_office_dicts-v_24.2.4.2-green)](https://github.com/slackalaxy/wps-office-dicts/releases/tag/24.2.4.2)
 
 ## Languages included
 ```
