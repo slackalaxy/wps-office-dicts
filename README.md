@@ -9,10 +9,10 @@ Depending on your distribution, the system-wide installation location may differ
    * you user only:  `~/.local/share/Kingsoft/office6/dicts/`
    * system-wide: `/opt/kingsoft/wps-office/office6/dicts/spellcheck/`
 
-## Version 24.2.4.2
+## Version
 Currently, this is adapted from [libreoffice-24.8.7.1](https://github.com/LibreOffice/dictionaries/releases/tag/libreoffice-24.8.7.1)
 
-[![Badge](https://img.shields.io/badge/wps_office_dicts-v_24.8.7.1-green)](https://github.com/slackalaxy/wps-office-dicts/releases/tag/24.8.7.1)
+[![Badge](https://img.shields.io/badge/wps_office_dicts-v24.8.7.1-green)](https://github.com/slackalaxy/wps-office-dicts/releases/tag/24.8.7.1)
 
 ## Languages included
 ```
