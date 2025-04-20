@@ -10,9 +10,9 @@ Depending on your distribution, the system-wide installation location may differ
    * system-wide: `/opt/kingsoft/wps-office/office6/dicts/spellcheck/`
 
 ## Version 24.2.4.2
-Currently, this is adapted from [libreoffice-24.2.4.2](https://github.com/LibreOffice/dictionaries/releases/tag/libreoffice-24.2.4.2)
+Currently, this is adapted from [libreoffice-24.8.7.1](https://github.com/LibreOffice/dictionaries/releases/tag/libreoffice-24.8.7.1)
 
-[![Badge](https://img.shields.io/badge/wps_office_dicts-v_24.2.4.2-green)](https://github.com/slackalaxy/wps-office-dicts/releases/tag/24.2.4.2)
+[![Badge](https://img.shields.io/badge/wps_office_dicts-v_24.8.7.1-green)](https://github.com/slackalaxy/wps-office-dicts/releases/tag/24.8.7.1)
 
 ## Languages included
 ```
@@ -113,7 +113,7 @@ vi_VN    Vietnamese
 
 set -e
 
-version="24.2.4.2"
+version="24.8.7.1"
 dicts="https://github.com/LibreOffice/dictionaries/archive/libreoffice-${version}/dictionaries-libreoffice-${version}.tar.gz"
 list="https://raw.githubusercontent.com/slackalaxy/wps-office-dicts/main/DICTIONARIES"
 
@@ -126,20 +126,16 @@ wget -c ${list}
 tar xvf dictionaries-libreoffice-${version}.tar.gz
 cd dictionaries-libreoffice-${version}
 
-# You can leave only the dictionaries you want, by modifying the DICTIONARIES file
-LANGS=$(awk '{print $1}' ${SRC}/DICTIONARIES  | tr '\n' ' ')
-
 DICTDIR="${SRC}/spellcheck"
 
-for i in ${LANGS[@]} ; do
+cat ${SRC}/DICTIONARIES  | while read -r i d ; do
 	# get the description
-	d=$(grep "$i" ${SRC}/DICTIONARIES | awk '{print $2}')
 	mkdir -p $DICTDIR/$i
  
 	# create the dictionary config
-	echo "[Dictionary]" >> $DICTDIR/$i/dict.conf
+	echo "[Dictionary]" > $DICTDIR/$i/dict.conf
 	echo "DisplayName=${d//_/ }" >> $DICTDIR/$i/dict.conf
-	echo "DisplayName[$i]=${d//_/ }" >> $DICTDIR/$i/dict.conf  
+	echo "DisplayName[$i]=${d//_/ }" >> $DICTDIR/$i/dict.conf
 
 	# This is the most common case  
 	find . -name "$i.aff" -exec cp {} $DICTDIR/$i/main.aff \;
